@@ -14,12 +14,16 @@ $word = $_POST['word'];
 </head>
 <body>
 
-    <h1>word: <?php  echo $word ?></h1>
-
+    <h3>Il paragrafo:</h3>
     <p>
-        text: <?php  echo $text?>
+        <?php  echo $text?>
     </p>
-
+    <h4>ha <?php echo strlen($text)?> caratteri</h4>
     
+
+    <h3>Il paragrafo censurato con la parola <?php echo $word ?>:</h3>
+    <p>
+        <?php  echo str_replace($word,'***', $text); ?>
+    </p>
 </body>
 </html>
